@@ -1,5 +1,7 @@
 package Class_Diagram;
 
+import java.awt.Robot;
+
 public class Palya {
 
 	private Mezo[][] mezok;
@@ -15,8 +17,13 @@ public class Palya {
 	 * @param ragacs
 	 */
 	public Palya(int szelesseg, int magassag, int robotszam, int olaj, int ragacs) {
-		// TODO - implement Pálya.Pálya
-		throw new UnsupportedOperationException();
+		//Mezők létrehozása
+		mezok = new Mezo[magassag][szelesseg]();
+		
+		//Robotok létrehozása
+		robotok = new Robot[3]();
+		
+		
 	}
 
 	/**
@@ -24,8 +31,17 @@ public class Palya {
 	 * @param v
 	 */
 	public void vektorFeldolgoz(Vektor v) {
-		// TODO - implement Pálya.vektorFeldolgoz
-		throw new UnsupportedOperationException();
+		
+		robotok[0].getOlajonVan();
+		
+		robotLeptet(robotok[0], v);
+		
+		mezok[0][1].setrobot(robotok[0]);
+		
+		mezok[0][1].getCheckpoint();
+		
+		robotok[0].addCheckpoint();
+		
 	}
 
 	/**
@@ -34,13 +50,23 @@ public class Palya {
 	 * @param v
 	 */
 	public void robotLeptet(Robot r, Vektor v) {
-		// TODO - implement Pálya.robotLeptet
-		throw new UnsupportedOperationException();
+		
+		r.lep(v);
+		
+		mezok[0][0].setRobot(NULL);
+		
+		mezok[0][1].getPalyaszakasz();
+		mezok[0][1].getAkadaly();
+		mezok[0][1].getRobot();
+		
+		r.setMezo(mezok[0][1]);
+		
 	}
 
 	public void cpKioszt() {
-		// TODO - implement Pálya.cpKioszt
-		throw new UnsupportedOperationException();
+		mezok[0][0].setCheckpoint(true);
+		mezok[0][1].setCheckpoint(true);
+		mezok[0][2].setCheckpoint(true);
 	}
 
 	/**
@@ -48,8 +74,7 @@ public class Palya {
 	 * @param r
 	 */
 	public void olajLerak(Robot r) {
-		// TODO - implement Pálya.olajLerak
-		throw new UnsupportedOperationException();
+		r.olajLerak();
 	}
 
 	/**
@@ -57,8 +82,7 @@ public class Palya {
 	 * @param r
 	 */
 	public void ragacsLerak(Robot r) {
-		// TODO - implement Pálya.ragacsLerak
-		throw new UnsupportedOperationException();
+		r.ragacsLerak();
 	}
 
 	/**
@@ -67,51 +91,17 @@ public class Palya {
 	 * @param v
 	 */
 	public void utkozes(Robot r, Vektor v) {
-		// TODO - implement Pálya.utkozes
-		throw new UnsupportedOperationException();
+		
+		r.lep(v);
+		mezok[0][1].getRobot();
+		r.setMezo(mezok[0][1]);
+		
 	}
 
 	public void gyoztesValaszt() {
-		// TODO - implement Pálya.gyoztesValaszt
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * 
-	 * @param r
-	 * @param v
-	 */
-	public void robotLeptet(Robot r, Vektor v) {
-		// TODO - implement Pálya.robotLeptet
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * 
-	 * @param r
-	 */
-	public void olajLerak(Robot r) {
-		// TODO - implement Pálya.olajLerak
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * 
-	 * @param r
-	 */
-	public void ragacsLerak(Robot r) {
-		// TODO - implement Pálya.ragacsLerak
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * 
-	 * @param r
-	 * @param v
-	 */
-	public void utkozes(Robot r, Vektor v) {
-		// TODO - implement Pálya.utkozes
-		throw new UnsupportedOperationException();
+		
+		robotok[0].getCheckpoint();
+		robotok[1].getCheckpoint();
 	}
 
 }
