@@ -19,10 +19,16 @@ public class Palya {
 	public Palya(int szelesseg, int magassag, int robotszam, int olaj, int ragacs, String objNev) {
 		//Mezők létrehozása
 		mezok = new Mezo[magassag][szelesseg]();
-		
+		for(int i = 0; i < magassag; ++i){
+			for(int j = 0; j < szelesseg; j++){
+				mezok[i][j] = new Mezo();
+			}
+		}
 		//Robotok létrehozása
 		robotok = new Robot[2]();
-		
+		for(int i = 0; i < robotok.length(); i++){
+			robotok[i] = new Robot(olaj, ragacs, "r"+i);
+		}
 		this.objNev = objNev;
 	}
 
@@ -76,7 +82,7 @@ public class Palya {
 		
 		mezok[0][0].setCheckpoint(true);
 		mezok[0][1].setCheckpoint(true);
-		mezok[0][2].setCheckpoint(true);
+		mezok[1][0].setCheckpoint(true);
 	}
 
 	/**Olajfolt elhelyezése
