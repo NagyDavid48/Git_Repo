@@ -35,11 +35,14 @@ public class Robot {
 		Vektor pozicio = mezo.getPoziciovektor();	//Lekérdezzük az cél mezőnek a pozicióVektorát
 		
 		int[] index = new int[2];			//Létrehozunk belőle és a Vektorból egy érkezési poziciót
-		index[0]=pozicio.getX();
-		index[1]=pozicio.getY();
+		int[] eredmeny = new int[2];
+		index[0] = pozicio.getX();
+		index[1] = pozicio.getY();
 		
 		vektorAtvalt(pozicio);				//A vektorátvált létrehozza a végleges koordinátákat ami
 								//alapján a Pálya tudja azonosítani a cél mezőt
+		for(int i; i<2; i++)
+			index[i] += eredmeny[i];
 		
 		return index;
 	}
