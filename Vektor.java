@@ -29,7 +29,7 @@ public class Vektor {
 	public void setY(int y) {
 		this.y = y;
 	}
-	
+	//Két vektort ad össze a metodus
 	public void osszead(Vektor v){
 		this.x += v.x;
 		this.y += v.y;
