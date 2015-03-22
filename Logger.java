@@ -104,6 +104,12 @@ public class Logger {
 			System.out.println("Kiindulási objektumok:");
 			objKiir();//"Init" vége
 			p.robotLeptet(r, new Vektor(0,1));//Indul
+			m.getRobot();
+			r2.getVektor();
+			p.utkozes(r2, new Vektor(0,-2));
+			m2.getRobot();
+			r2.setMezo(r2);
+			r.setMezo(m);
 			break;
 		case 10: //Leesés
 			Palya p = new Palya(2,2,2,2,2,"p");
@@ -117,6 +123,8 @@ public class Logger {
 			System.out.println("Kiindulási objektumok:");
 			objKiir();//"Init" vége
 			p.robotLeptet(r1, new Vektor(0,1));//Indul
+			m2.getPalyaszakasz();
+			r1.setKiesett(true);
 			break;
 		default://Magical place in Hell!
 			System.out.println("Nincs ilyen számú szekvenciadiagram");
