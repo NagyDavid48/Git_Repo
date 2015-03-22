@@ -5,6 +5,8 @@ public class Palya {
 	private Mezo[][] mezok;
 	private Robot[] robotok;
 	private int soronlevo;
+	
+	private String objNev;
 
 	/**
 	 * 
@@ -14,17 +16,19 @@ public class Palya {
 	 * @param olaj
 	 * @param ragacs
 	 */
-	public Palya(int szelesseg, int magassag, int robotszam, int olaj, int ragacs) {
+	public Palya(int szelesseg, int magassag, int robotszam, int olaj, int ragacs, String objNev) {
 		//Mezők létrehozása
 		mezok = new Mezo[magassag][szelesseg]();
 		
 		//Robotok létrehozása
 		robotok = new Robot[3]();
 		
-		
+		this.objNev = objNev;
 	}
 
 	/**
+	 * 
+	 * 
 	 * 
 	 * @param v
 	 */
@@ -40,7 +44,9 @@ public class Palya {
 		
 	}
 
-	/**
+	/**Robot léptetése
+	 * 
+	 * Kiszámolja az új mező pozícióját, megnézi a mező tulajdonságait majd lépteti a robotot
 	 * 
 	 * @param r
 	 * @param v
@@ -60,7 +66,11 @@ public class Palya {
 		r.setMezo(mezok[0][1]);
 		
 	}
-
+	/** Checkpoint elhelyezés
+	 *
+	 * Bizonyos számú kör leteltével néhány mezőt checkpointnak állít be.
+	 * 
+	 */
 	public void cpKioszt() {
 		System.out.println("cpKioszt");
 		
@@ -69,7 +79,9 @@ public class Palya {
 		mezok[0][2].setCheckpoint(true);
 	}
 
-	/**
+	/**Olajfolt elhelyezése
+	 * 
+	 * Olajfoltot tesz arra a mezőre ahol az azt elhelyező robot áll éppen.
 	 * 
 	 * @param r
 	 */
@@ -78,7 +90,9 @@ public class Palya {
 		r.olajLerak();
 	}
 
-	/**
+	/**Ragacs elhelyezése
+	 * 
+	 * Ragacsot tesz arra a mezőre ahol az azt elhelyező robot áll éppen.
 	 * 
 	 * @param r
 	 */
@@ -87,7 +101,9 @@ public class Palya {
 		r.ragacsLerak();
 	}
 
-	/**
+	/**Két robot ütközése
+	 * 
+	 * A robotot akinek nekiütköztek visszalépteti az előző pozíciójára
 	 * 
 	 * @param r
 	 * @param v
@@ -100,7 +116,12 @@ public class Palya {
 		r.setMezo(mezok[0][1]);
 		
 	}
-
+	
+	/**
+	 *
+	 * A játék végén kiválasztja hogy melyik robot lépett ráa legtöbb checkpointra
+	 * 
+	 */
 	public void gyoztesValaszt() {
 		System.out.println("gyoztesValaszt");
 		
