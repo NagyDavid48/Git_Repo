@@ -1,5 +1,6 @@
 package Class_Diagram;
 
+
 public class Mezo {
 
 	private boolean checkpoint;
@@ -8,100 +9,64 @@ public class Mezo {
 	private Robot robot;
 	private Vektor poziciovektor;
 
-	/**
-	 * 
-	 * @param checkp
-	 * @param akadaly
-	 * @param robot
-	 * @param pozicio
-	 */
-	public Mezo(boolean checkp, boolean akadaly, boolean robot, Vektor pozicio) {
-		// TODO - implement Mezõ.Mezõ
-		throw new UnsupportedOperationException();
-	}
 
+	// A Mezo osztály konstruktora, beállítja a checkpointot, pályaszakaszt, akadályt, robotot és a pozíciót
+	public Mezo(boolean checkp, boolean palyaszakasz, Akadaly akadaly, Robot robot, Vektor pozicio) {
+		this.checkpoint = checkp;
+		this.palyaszakasz = palyaszakasz;
+		this.akadaly = akadaly;
+		this.robot = robot;
+	}
+	
+	// checkpoint gettere
 	public boolean getCheckpoint() {
 		return this.checkpoint;
 	}
 
-	/**
-	 * 
-	 * @param checkpoint
-	 */
+	//checkpoint settere
 	public void setCheckpoint(boolean checkpoint) {
 		this.checkpoint = checkpoint;
 	}
-
+	
+	//palyaszakasz gettere
 	public boolean getPalyaszakasz() {
 		return this.palyaszakasz;
 	}
 
-	/**
-	 * 
-	 * @param palyaszakasz
-	 */
+	//palyaszakasz settere
 	public void setPalyaszakasz(boolean palyaszakasz) {
 		this.palyaszakasz = palyaszakasz;
 	}
-
+	//akadaly gettere
 	public Akadaly getAkadaly() {
 		return this.akadaly;
 	}
 
-	/**
-	 * 
-	 * @param akadaly
-	 */
+	//akadaly settere
 	public void setAkadaly(Akadaly akadaly) {
 		this.akadaly = akadaly;
 	}
-
+	
+	//robot gettere
 	public Robot getRobot() {
 		return this.robot;
 	}
 
-	/**
-	 * 
-	 * @param robot
-	 */
+	//robot settere
 	public void setRobot(Robot robot) {
 		this.robot = robot;
 	}
 
+	//poziciovektor gettere
 	public Vektor getPoziciovektor() {
 		return this.poziciovektor;
 	}
 
-	/**
-	 * 
-	 * @param poziciovektor
-	 */
+	//poziciovektor settere
 	public void setPoziciovektor(Vektor poziciovektor) {
 		this.poziciovektor = poziciovektor;
 	}
 
-	public Akadály getAkadaly() {
-		return this.akadaly;
-	}
 
-	/**
-	 * 
-	 * @param akadaly
-	 */
-	public void setAkadaly(Akadály akadaly) {
-		this.akadaly = akadaly;
-	}
-
-	public Robot getRobot() {
-		return this.robot;
-	}
-
-	/**
-	 * 
-	 * @param robot
-	 */
-	public void setRobot(Robot robot) {
-		this.robot = robot;
-	}
 
 }
