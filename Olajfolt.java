@@ -3,7 +3,7 @@ package Class_Diagram;
 public class Olajfolt extends Akadaly {
 
 	//Konstruktor a szkeleton idejére.
-	public Olajfolt(string nev){
+	public Olajfolt(String nev){
 		this.obinev = nev;
 	}
 	/**
