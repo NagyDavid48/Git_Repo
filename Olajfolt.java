@@ -2,6 +2,10 @@ package Class_Diagram;
 
 public class Olajfolt extends Akadaly {
 
+	//Konstruktor a szkeleton idejére.
+	public Olajfolt(string nev){
+		this.obinev = nev;
+	}
 	/**
 	 * A robot megcsúszik. A következő kőrben nem változtathatja a sebességét.
 	 * @param r
