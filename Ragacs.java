@@ -7,8 +7,8 @@ public class Ragacs extends Akadaly {
 	 * @param r
 	 */
 	public void viselkedes(Robot r) {
-		System.out.println("Ragacs viselkedes fv. kezdodik r parameterrel.");
+		//System.out.println("");
 		r.ragacsraLepett();
-		System.out.println("Ragacs viselkedes fv. vege.");
+		//System.out.println("");
 	}
 }
