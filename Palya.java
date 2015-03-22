@@ -18,7 +18,7 @@ public class Palya {
 	 */
 	public Palya(int szelesseg, int magassag, int robotszam, int olaj, int ragacs, String objNev) {
 		//Mezők létrehozása
-		mezok = new Mezo[magassag][szelesseg]();
+		mezok = new Mezo[magassag][szelesseg];
 		for(int i = 0; i < magassag; ++i){
 			for(int j = 0; j < szelesseg; j++){
 				mezok[i][j] = new Mezo();
