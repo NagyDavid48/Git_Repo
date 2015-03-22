@@ -70,7 +70,7 @@ public class Logger {
 			objektumok.add("r : Robot");
 			System.out.println("Kiindulási objektumok:");
 			objKiir();
-			r.toString();
+			r.setMezo();
 			break;
 		default:
 			System.out.println("Nincs ilyen számú szekvenciadiagram");
