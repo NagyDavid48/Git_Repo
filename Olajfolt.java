@@ -1,4 +1,4 @@
-package akadaly;
+package Class_Diagram;
 
 public class Olajfolt extends Akadaly {
 
