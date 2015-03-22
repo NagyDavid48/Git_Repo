@@ -1,23 +1,14 @@
-package Class_Diagram;
+package akadaly;
 
-public class Olajfolt extends Akadaly {
+public class Ragacs extends Akadaly {
 
 	/**
-	 * 
+	 * A robot sebesség vektora a felére csökken.
 	 * @param r
 	 */
 	public void viselkedes(Robot r) {
-		// TODO - implement Olajfolt.viselkedés
-		throw new UnsupportedOperationException();
+		System.out.println("Ragacs viselkedes fv. kezdodik r parameterrel.");
+		r.ragacsraLepett();
+		System.out.println("Ragacs viselkedes fv. vege.");
 	}
-
-	/**
-	 * 
-	 * @param r
-	 */
-	public void viselkedes(Robot r) {
-		// TODO - implement Olajfolt.viselkedés
-		throw new UnsupportedOperationException();
-	}
-
 }
