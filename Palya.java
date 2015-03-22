@@ -21,7 +21,7 @@ public class Palya {
 		mezok = new Mezo[magassag][szelesseg]();
 		
 		//Robotok létrehozása
-		robotok = new Robot[3]();
+		robotok = new Robot[2]();
 		
 		this.objNev = objNev;
 	}
