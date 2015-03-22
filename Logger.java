@@ -118,17 +118,6 @@ public class Logger {
 			objKiir();
 			r.setMezo();
 			break;
-		case 8:
-			Palya p = new Palya( argumentumok );
-			objektumok.add("p : Palya");
-			Mezo m = new Mezo( argumentumok );
-			objektumok.add("m : Mezo");
-			Robot r = new Robot( argumentumok );
-			objektumok.add("r : Robot");
-			System.out.println("Kiindulási objektumok:");
-			objKiir();
-			r.setMezo();
-			break;
 		case 9: // Ütközés
 			Palya p = new Palya(2,2,2,2,2,"p");
 			objektumok.add("p : Palya");
