@@ -60,24 +60,7 @@ public class Logger {
 //			objKiir();
 //			első metódus meghívása
 //			break;
-		case 5:
-			Palya_Menedzser pm = new Palya_Menedzser( argumentumok );
-			objektumok.add("pm : Palya_Menedzser");
-			Palya p = new Palya( argumentumok );
-			objektumok.add("p : Palya");
-			Mezo m = new Mezo( argumentumok );
-			objektumok.add("m : Mezo");
-			Mezo m1 = new Mezo( argumentumok );
-			objektumok.add("m1 : Mezo");
-			Mezo m2 = new Mezo( argumentumok );
-			objektumok.add("m2 : Mezo");
-			System.out.println("Kiindulási objektumok:");
-			objKiir();
-			for(int i=0; i<3; i++)
-			   pm.korSzamol();
-			m.setCheckpoint(true);
-			m1.setCheckpoint(true);
-			m2.setCheckpoint(true);
+			
 		case 8:
 			Palya p = new Palya( argumentumok );
 			objektumok.add("p : Palya");
@@ -90,18 +73,19 @@ public class Logger {
 			r.setMezo();
 			break;
 		case 9: // Ütközés
-			Palya p = new Palya(2,2,2,,);
+			Palya p = new Palya(2,2,2,2,2,"p");
 			objektumok.add("p : Palya");
-			Mezo m = new Mezo();
+			Mezo m = new Mezo(false, true, null, r2, new Vektor(0,0));
 			objektumok.add("m : Mezo");
-			Mezo m2 = new Mezo();
+			Mezo m2 = new Mezo(false, true, null, null, new Vektor(0,0));
 			objektumok.add("m2 : Mezo");
-			Robot r = new Robot();
+			Robot r = new Robot(2, 2, "r");
 			objektumok.add("r : Robot");
-			Robot r2 = new Robot();
+			Robot r2 = new Robot(2,2,"r2");
 			objektumok.add("r2 : Robot");
 			System.out.println("Kiindulási objektumok:");
 			objKiir();
+			p.robotLeptet(r, new Vektor());
 			break;
 		default:
 			System.out.println("Nincs ilyen számú szekvenciadiagram");
