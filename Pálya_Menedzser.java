@@ -1,6 +1,6 @@
 package Class_Diagram;
 
-public class Pálya_Menedzser {
+public class Palya_Menedzser {
 
 	private int kor;
 	private int olajkeszlet;
@@ -12,13 +12,13 @@ public class Pálya_Menedzser {
 	 * @param ragacs
 	 * @param olaj
 	 */
-	public Pálya_Menedzser(int kor, int ragacs, int olaj) {
-		// TODO - implement Pálya_Menedzser.Pálya_Menedzser
+	public Palya_Menedzser(int kor, int ragacs, int olaj) {
+		// TODO - implement PÃ¡lya_Menedzser.PÃ¡lya_Menedzser
 		throw new UnsupportedOperationException();
 	}
 
 	public void korSzamol() {
-		// TODO - implement Pálya_Menedzser.korSzamol
+		// TODO - implement PÃ¡lya_Menedzser.korSzamol
 		throw new UnsupportedOperationException();
 	}
 
