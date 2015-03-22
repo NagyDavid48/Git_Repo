@@ -28,13 +28,15 @@ public class Palya_Menedzser {
 		this.kor = kor;
 		this.ragacskeszlet = ragacs;
 		this.olajkeszlet = olaj;
+		palya = new Palya(mag,szel,rob,olaj,ragacs);
 		//System.out.println("");
 	}
 
 	public void korSzamol() {
 		//System.out.println("PM - korSzamol fv. kezdodik.");
-		kor--;//Mínusz 1 kőr
-		
+		// ... Kőr számlálás
+		// ... Valami feltétel
+		palya.gyoztesValaszt();
 		//System.out.println("korSzamol vege.");
 	}
 
