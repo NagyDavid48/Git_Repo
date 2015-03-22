@@ -37,8 +37,10 @@ public class Mezo {
 	public void setPalyaszakasz(boolean palyaszakasz) {
 		this.palyaszakasz = palyaszakasz;
 	}
-	//akadaly gettere
+	
+	//akadaly gettere, meghívja az akadály viselkedését
 	public Akadaly getAkadaly() {
+		this.akadaly.viselkedes(this.robot);
 		return this.akadaly;
 	}
 
