@@ -16,7 +16,7 @@ public class Palya_Menedzser {
 	private int olajkeszlet;//Robot olaj...
 	private int ragacskeszlet;//...és ragacs készlete
 	private Palya palya;
-	private string obinev;
+	private String obinev;
 	
 	/**
 	 * 
