@@ -1,6 +1,5 @@
 package Class_Diagram;
 
-
 public class Mezo {
 
 	private boolean checkpoint;
@@ -8,14 +7,17 @@ public class Mezo {
 	private Akadaly akadaly;
 	private Robot robot;
 	private Vektor poziciovektor;
+	
+	private String obinev;
 
 
 	// A Mezo osztály konstruktora, beállítja a checkpointot, pályaszakaszt, akadályt, robotot és a pozíciót
-	public Mezo(boolean checkp, boolean palyaszakasz, Akadaly akadaly, Robot robot, Vektor pozicio) {
+	public Mezo(boolean checkp, boolean palyaszakasz, Akadaly akadaly, Robot robot, Vektor pozicio, String nev) {
 		this.checkpoint = checkp;
 		this.palyaszakasz = palyaszakasz;
 		this.akadaly = akadaly;
 		this.robot = robot;
+		this.obinev = nev;
 	}
 	
 	// checkpoint gettere
