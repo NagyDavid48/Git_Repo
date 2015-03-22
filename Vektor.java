@@ -30,5 +30,8 @@ public class Vektor {
 		this.y = y;
 	}
 	
-	
+	public void osszead(Vektor v){
+		this.x += v.x;
+		this.y += v.y;
+	}
 }
