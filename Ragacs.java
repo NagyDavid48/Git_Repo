@@ -1,13 +1,13 @@
 package Class_Diagram;
 
-public class Ragacs extends Akadály {
+public class Ragacs extends Akadaly {
 
 	/**
 	 * 
 	 * @param r
 	 */
-	public void viselkedés(Robot r) {
-		// TODO - implement Ragacs.viselkedés
+	public void viselkedes(Robot r) {
+		// TODO - implement Ragacs.viselkedÃ©s
 		throw new UnsupportedOperationException();
 	}
 
@@ -15,8 +15,8 @@ public class Ragacs extends Akadály {
 	 * 
 	 * @param r
 	 */
-	public void viselkedés(Robot r) {
-		// TODO - implement Ragacs.viselkedés
+	public void viselkedes(Robot r) {
+		// TODO - implement Ragacs.viselkedÃ©s
 		throw new UnsupportedOperationException();
 	}
 
