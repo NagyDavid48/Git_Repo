@@ -2,7 +2,7 @@ package Class_Diagram;
 
 public class Ragacs extends Akadaly {
 
-	public Ragacs(string nev){
+	public Ragacs(String nev){
 		this.obinev = nev;
 	}
 	/**
