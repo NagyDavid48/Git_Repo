@@ -60,6 +60,38 @@ public class Logger {
 //			objKiir();
 //			első metódus meghívása
 //			break;
+		
+		case 
+		
+		case 6:
+			Palya p = new Palya();
+			objektumok.add("p : Palya");
+			Mezo m = new Mezo();
+			objektumok.add("m : Mezo");
+			Olajfolt o = new Olajfolt();
+			objektumok.add("o : Olajfolt");
+			Robot r = new Robot();
+			objektumok.add("r : Robot");
+			System.out.println("Kiindulási objektumok:");
+			objKiir();
+			m.getAkadaly();
+			r.setMezo(m);
+			break;
+		
+		case 7:
+			Palya p = new Palya();
+			objektumok.add("p : Palya");
+			Mezo m = new Mezo();
+			objektumok.add("m : Mezo");
+			Ragacs ra = new Ragacs();
+			objektumok.add("ra : Ragacs");
+			Robot r = new Robot( argumentumok );
+			objektumok.add("r : Robot");
+			System.out.println("Kiindulási objektumok:");
+			objKiir();
+			m.getAkadaly();
+			r.setMezo(m);
+			break;
 			
 		case 8:
 			Palya p = new Palya( argumentumok );
