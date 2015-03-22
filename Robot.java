@@ -18,9 +18,13 @@ public class Robot {
 	 * Konstruktor létrehoz egy Vektort, egy Mezőt
 	 */
 	public Robot(int olajszam, int ragacsszam, String nev) {
-		Vektor v = new Vektor(0,0);		
+		Vektor v = new Vektor(0,0);
+		this.sebessegvektor = v;
 		mezo = new Mezo(false,false,false,v);
 		this.mezo = mezo;
+		this.olaj = olajszam;
+		this.ragacs = ragacsszam;
+		this.obinev = nev;
 	}
 
 	/**
