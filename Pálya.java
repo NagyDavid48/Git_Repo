@@ -1,8 +1,8 @@
 package Class_Diagram;
 
-public class Pálya {
+public class Palya {
 
-	private Mezõ[][] mezok;
+	private Mezo[][] mezok;
 	private Robot[] robotok;
 	private int soronlevo;
 
@@ -14,8 +14,8 @@ public class Pálya {
 	 * @param olaj
 	 * @param ragacs
 	 */
-	public Pálya(int szelesseg, int magassag, int robotszam, int olaj, int ragacs) {
-		// TODO - implement Pálya.Pálya
+	public Palya(int szelesseg, int magassag, int robotszam, int olaj, int ragacs) {
+		// TODO - implement PÃ¡lya.PÃ¡lya
 		throw new UnsupportedOperationException();
 	}
 
@@ -24,7 +24,7 @@ public class Pálya {
 	 * @param v
 	 */
 	public void vektorFeldolgoz(Vektor v) {
-		// TODO - implement Pálya.vektorFeldolgoz
+		// TODO - implement PÃ¡lya.vektorFeldolgoz
 		throw new UnsupportedOperationException();
 	}
 
@@ -34,12 +34,12 @@ public class Pálya {
 	 * @param v
 	 */
 	public void robotLeptet(Robot r, Vektor v) {
-		// TODO - implement Pálya.robotLeptet
+		// TODO - implement PÃ¡lya.robotLeptet
 		throw new UnsupportedOperationException();
 	}
 
 	public void cpKioszt() {
-		// TODO - implement Pálya.cpKioszt
+		// TODO - implement PÃ¡lya.cpKioszt
 		throw new UnsupportedOperationException();
 	}
 
@@ -48,7 +48,7 @@ public class Pálya {
 	 * @param r
 	 */
 	public void olajLerak(Robot r) {
-		// TODO - implement Pálya.olajLerak
+		// TODO - implement PÃ¡lya.olajLerak
 		throw new UnsupportedOperationException();
 	}
 
@@ -57,7 +57,7 @@ public class Pálya {
 	 * @param r
 	 */
 	public void ragacsLerak(Robot r) {
-		// TODO - implement Pálya.ragacsLerak
+		// TODO - implement PÃ¡lya.ragacsLerak
 		throw new UnsupportedOperationException();
 	}
 
@@ -67,12 +67,12 @@ public class Pálya {
 	 * @param v
 	 */
 	public void utkozes(Robot r, Vektor v) {
-		// TODO - implement Pálya.utkozes
+		// TODO - implement PÃ¡lya.utkozes
 		throw new UnsupportedOperationException();
 	}
 
 	public void gyoztesValaszt() {
-		// TODO - implement Pálya.gyoztesValaszt
+		// TODO - implement PÃ¡lya.gyoztesValaszt
 		throw new UnsupportedOperationException();
 	}
 
@@ -82,7 +82,7 @@ public class Pálya {
 	 * @param v
 	 */
 	public void robotLeptet(Robot r, Vektor v) {
-		// TODO - implement Pálya.robotLeptet
+		// TODO - implement PÃ¡lya.robotLeptet
 		throw new UnsupportedOperationException();
 	}
 
@@ -91,7 +91,7 @@ public class Pálya {
 	 * @param r
 	 */
 	public void olajLerak(Robot r) {
-		// TODO - implement Pálya.olajLerak
+		// TODO - implement PÃ¡lya.olajLerak
 		throw new UnsupportedOperationException();
 	}
 
@@ -100,7 +100,7 @@ public class Pálya {
 	 * @param r
 	 */
 	public void ragacsLerak(Robot r) {
-		// TODO - implement Pálya.ragacsLerak
+		// TODO - implement PÃ¡lya.ragacsLerak
 		throw new UnsupportedOperationException();
 	}
 
@@ -110,7 +110,7 @@ public class Pálya {
 	 * @param v
 	 */
 	public void utkozes(Robot r, Vektor v) {
-		// TODO - implement Pálya.utkozes
+		// TODO - implement PÃ¡lya.utkozes
 		throw new UnsupportedOperationException();
 	}
 
