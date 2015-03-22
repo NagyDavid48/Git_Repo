@@ -6,7 +6,7 @@ public class Robot {
 	private int olaj;
 	private int ragacs;
 	private int checkpoint;
-	private Mezõ mezo;
+	private Mezo mezo;
 	private boolean olajonvan;
 	private boolean kiesett;
 
@@ -86,7 +86,7 @@ public class Robot {
 		this.kiesett = kiesett;
 	}
 
-	public Mezõ getMezo() {
+	public Mezo getMezo() {
 		return this.mezo;
 	}
 
@@ -94,7 +94,7 @@ public class Robot {
 	 * 
 	 * @param mezo
 	 */
-	public void setMezo(Mezõ mezo) {
+	public void setMezo(Mezo mezo) {
 		this.mezo = mezo;
 	}
 
