@@ -16,6 +16,7 @@ public class Palya_Menedzser {
 	private int olajkeszlet;//Robot olaj...
 	private int ragacskeszlet;//...és ragacs készlete
 	private Palya palya;
+	private string obinev;
 	
 	/**
 	 * 
@@ -23,12 +24,13 @@ public class Palya_Menedzser {
 	 * @param ragacs
 	 * @param olaj
 	 */
-	public Palya_Menedzser(int kor, int ragacs, int olaj) {
+	public Palya_Menedzser(int kor, int mag, int szel, int rob, int ragacs, int olaj, string nev) {
 		//System.out.println("");
 		this.kor = kor;
 		this.ragacskeszlet = ragacs;
 		this.olajkeszlet = olaj;
-		palya = new Palya(mag,szel,rob,olaj,ragacs);
+		this.obinev = nev;
+		palya = new Palya(mag, szel, rob, olaj, ragacs);
 		//System.out.println("");
 	}
 
@@ -36,7 +38,11 @@ public class Palya_Menedzser {
 		//System.out.println("PM - korSzamol fv. kezdodik.");
 		// ... Kőr számlálás
 		// ... Valami feltétel
-		palya.gyoztesValaszt();
+		kor--;
+		if(kor % 3 == 0)
+			palya.cpKioszt();
+		if(kor == 0)
+			palya.gyoztesValaszt();
 		//System.out.println("korSzamol vege.");
 	}
 
