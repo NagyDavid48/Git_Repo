@@ -9,7 +9,7 @@ public class Robot {
 	private Mezo mezo;		//A Mező amin jelenleg a robot tartozkodik
 	private boolean olajonvan;	//Megadja hogy a robot Olajfoltra lépett-e az előző körben
 	private boolean kiesett;	//Megadja hogy a robot leesett-e már a pályáról
-	private String Obinem;		//Segédváltozó objektum azonosításra
+	private String Obinev;		//Segédváltozó objektum azonosításra
 
 	/**
 	 * 
