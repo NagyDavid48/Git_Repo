@@ -16,8 +16,9 @@ public class Robot {
 	 * @param ragacsszam
 	 */
 	public Robot(int olajszam, int ragacsszam) {
-		// TODO - implement Robot.Robot
-		throw new UnsupportedOperationException();
+		Vektor v = new Vektor(0,0);
+		mezo = new Mezo(false,false,false,v);
+		this.mezo = mezo;
 	}
 
 	/**
@@ -25,8 +26,15 @@ public class Robot {
 	 * @param v
 	 */
 	public int[] lep(Vektor v) {
-		// TODO - implement Robot.lep
-		throw new UnsupportedOperationException();
+		Vektor pozicio = mezo.getPoziciovektor();
+		
+		int[] index = new int[2];
+		index[0]=pozicio.getX();
+		index[1]=pozicio.getY();
+		
+		vektorAtvalt(pozicio);
+		
+		return index;
 	}
 
 	/**
@@ -34,23 +42,30 @@ public class Robot {
 	 * @param v
 	 */
 	public int[] vektorAtvalt(Vektor v) {
-		// TODO - implement Robot.vektorAtvalt
-		throw new UnsupportedOperationException();
+		v.setX(1);
+		v.setY(1);
+		
+		int[] index = new int[2];
+		index[0]=v.getX();
+		index[1]=v.getY();
+		
+		return index;
 	}
 
 	public void olajLerak() {
-		// TODO - implement Robot.olajLerak
-		throw new UnsupportedOperationException();
+		Olajfolt o = new Olajfolt();
+		mezo.setAkadaly(o);
 	}
 
 	public void ragacsLerak() {
-		// TODO - implement Robot.ragacsLerak
-		throw new UnsupportedOperationException();
+		Ragacs r = new Ragacs();
+		mezo.setAkadaly(r);
 	}
 
 	public void ragacsraLepett() {
-		// TODO - implement Robot.ragacsraLepett
-		throw new UnsupportedOperationException();
+		sebessegvektor.setX(sebessegvektor.getX()/2);
+		sebessegvektor.setY(sebessegvektor.getY()/2);
+		System.out.println("Ragacsralepett");
 	}
 
 	/**
@@ -70,8 +85,7 @@ public class Robot {
 	}
 
 	public void addCheckpoint() {
-		// TODO - implement Robot.addCheckpoint
-		throw new UnsupportedOperationException();
+		checkpoint++;
 	}
 
 	public boolean getKiesett() {
@@ -97,5 +111,4 @@ public class Robot {
 	public void setMezo(Mezo mezo) {
 		this.mezo = mezo;
 	}
-
 }
