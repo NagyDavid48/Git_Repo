@@ -1,7 +1,5 @@
 package Class_Diagram;
 
-import java.awt.Robot;
-
 public class Palya {
 
 	private Mezo[][] mezok;
