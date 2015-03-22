@@ -93,8 +93,11 @@ public class Logger {
 		
 	}
 	
+	//a megadott számot szövegből számmá alakítja. Ha nem tudja, 20-szal tér vissza
 	public static int readMenu() throws IOException{
-		return Integer.parseInt(reader.readLine());
+		try{
+			return Integer.parseInt(reader.readLine());
+		}catch (NumberFormatException e){return 20;}
 		
 	}
 
