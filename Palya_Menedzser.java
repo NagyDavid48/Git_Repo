@@ -38,11 +38,7 @@ public class Palya_Menedzser {
 		//System.out.println("PM - korSzamol fv. kezdodik.");
 		// ... Kőr számlálás
 		// ... Valami feltétel
-		kor--;
-		if(kor % 3 == 0)
-			palya.cpKioszt();
-		if(kor == 0)
-			palya.gyoztesValaszt();
+		System.out.println("korszamol");
 		//System.out.println("korSzamol vege.");
 	}
 
