@@ -15,6 +15,7 @@ public class Palya_Menedzser {
 	private int kor;//Ennyi kőr lesz a játék alatt
 	private int olajkeszlet;//Robot olaj...
 	private int ragacskeszlet;//...és ragacs készlete
+	private Palya palya;
 	
 	/**
 	 * 
@@ -32,7 +33,8 @@ public class Palya_Menedzser {
 
 	public void korSzamol() {
 		//System.out.println("PM - korSzamol fv. kezdodik.");
-		this.kor--;//Mínusz 1 kőr
+		kor--;//Mínusz 1 kőr
+		
 		//System.out.println("korSzamol vege.");
 	}
 
