@@ -31,15 +31,13 @@ public class Palya {
 	 * @param v
 	 */
 	public void vektorFeldolgoz(Vektor v) {
+		System.out.println("vektorFeldolgoz");
+		
 		
 		robotok[0].getOlajonVan();
-		
 		robotLeptet(robotok[0], v);
-		
 		mezok[0][1].setrobot(robotok[0]);
-		
 		mezok[0][1].getCheckpoint();
-		
 		robotok[0].addCheckpoint();
 		
 	}
@@ -50,6 +48,8 @@ public class Palya {
 	 * @param v
 	 */
 	public void robotLeptet(Robot r, Vektor v) {
+		System.out.println("robotLeptet");
+		
 		
 		r.lep(v);
 		
@@ -64,6 +64,8 @@ public class Palya {
 	}
 
 	public void cpKioszt() {
+		System.out.println("cpKioszt");
+		
 		mezok[0][0].setCheckpoint(true);
 		mezok[0][1].setCheckpoint(true);
 		mezok[0][2].setCheckpoint(true);
@@ -74,6 +76,7 @@ public class Palya {
 	 * @param r
 	 */
 	public void olajLerak(Robot r) {
+		System.out.println("olajLerak");
 		r.olajLerak();
 	}
 
@@ -82,6 +85,7 @@ public class Palya {
 	 * @param r
 	 */
 	public void ragacsLerak(Robot r) {
+		System.out.println("ragacsLerak");
 		r.ragacsLerak();
 	}
 
@@ -91,6 +95,7 @@ public class Palya {
 	 * @param v
 	 */
 	public void utkozes(Robot r, Vektor v) {
+		System.out.println("utkozes");
 		
 		r.lep(v);
 		mezok[0][1].getRobot();
@@ -99,6 +104,7 @@ public class Palya {
 	}
 
 	public void gyoztesValaszt() {
+		System.out.println("gyoztesValaszt");
 		
 		robotok[0].getCheckpoint();
 		robotok[1].getCheckpoint();
