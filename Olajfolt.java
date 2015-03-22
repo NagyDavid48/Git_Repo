@@ -1,13 +1,13 @@
 package Class_Diagram;
 
-public class Olajfolt extends Akadály {
+public class Olajfolt extends Akadaly {
 
 	/**
 	 * 
 	 * @param r
 	 */
-	public void viselkedés(Robot r) {
-		// TODO - implement Olajfolt.viselkedés
+	public void viselkedes(Robot r) {
+		// TODO - implement Olajfolt.viselkedÃ©s
 		throw new UnsupportedOperationException();
 	}
 
@@ -15,8 +15,8 @@ public class Olajfolt extends Akadály {
 	 * 
 	 * @param r
 	 */
-	public void viselkedés(Robot r) {
-		// TODO - implement Olajfolt.viselkedés
+	public void viselkedes(Robot r) {
+		// TODO - implement Olajfolt.viselkedÃ©s
 		throw new UnsupportedOperationException();
 	}
 
