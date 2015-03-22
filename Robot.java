@@ -17,7 +17,7 @@ public class Robot {
 	 * @param ragacsszam
 	 * Konstruktor létrehoz egy Vektort, egy Mezőt
 	 */
-	public Robot(int olajszam, int ragacsszam) {
+	public Robot(int olajszam, int ragacsszam, String nev) {
 		Vektor v = new Vektor(0,0);		
 		mezo = new Mezo(false,false,false,v);
 		this.mezo = mezo;
