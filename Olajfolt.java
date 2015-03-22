@@ -7,8 +7,8 @@ public class Olajfolt extends Akadaly {
 	 * @param r
 	 */
 	public void viselkedes(Robot r) {
-		System.out.println("Olajfolt viselkedes fv.-e kezdodik r parameterrel");
+		//System.out.println("");
 		r.setOlajonVan(true);
-		System.out.println("Olajfolt viselkedes fv. vege");
+		//System.out.println("");
 	}
 }
