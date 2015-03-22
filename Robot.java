@@ -16,7 +16,7 @@ public class Robot {
 	 * @param ragacsszam
 	 */
 	public Robot(int olajszam, int ragacsszam) {
-		Vektor v = new Vektor(0,0);
+		Vektor v = new Vektor(0,0);		
 		mezo = new Mezo(false,false,false,v);
 		this.mezo = mezo;
 	}
