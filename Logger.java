@@ -60,7 +60,25 @@ public class Logger {
 //			objKiir();
 //			első metódus meghívása
 //			break;
-			
+		case 5:
++			Palya_Menedzser pm = new Palya_Menedzser( argumentumok );
++			objektumok.add("pm : Palya_Menedzser");
++			Palya p = new Palya( argumentumok );
++			objektumok.add("p : Palya");
++			Mezo m = new Mezo( argumentumok );
++			objektumok.add("m : Mezo");
++			Mezo m1 = new Mezo( argumentumok );
++			objektumok.add("m1 : Mezo");
++			Mezo m2 = new Mezo( argumentumok );
++			objektumok.add("m2 : Mezo");
++			System.out.println("Kiindulási objektumok:");
++			objKiir();
++			for(int i=0; i<3; i++)
++			   pm.korSzamol();
++			m.setCheckpoint(true);
++			m1.setCheckpoint(true);
++			m2.setCheckpoint(true);
+			break;
 		case 8:
 			Palya p = new Palya( argumentumok );
 			objektumok.add("p : Palya");
