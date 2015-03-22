@@ -1,7 +1,5 @@
 package palya;
 
-import java.util.TimerTask;
-
 /**
  * Ez az osztály a pálya és a felhasználó "között" van. Fogadja az inputokat és a játék számára
  * értelmezhetővé teszi. Vektorokat tovább küldi a pályának, robotoknak. A játékos akadály 
@@ -25,21 +23,21 @@ public class Palya_Menedzser {
 	 * @param olaj
 	 */
 	public Palya_Menedzser(int kor, int ragacs, int olaj) {
-		System.out.println("PM - konstruktor hivas. "+kor+", "+ragacs+", "+olaj+" parameterekkel.");
+		//System.out.println("");
 		this.kor = kor;
 		this.ragacskeszlet = ragacs;
 		this.olajkeszlet = olaj;
-		System.out.println("PM - Konstruktor vege");
+		//System.out.println("");
 	}
 
 	public void korSzamol() {
-		System.out.println("PM - korSzamol fv. kezdodik.");
+		//System.out.println("PM - korSzamol fv. kezdodik.");
 		this.kor--;//Mínusz 1 kőr
-		System.out.println("korSzamol vege.");
+		//System.out.println("korSzamol vege.");
 	}
 
 	public int getKor() {
-		System.out.println("PM - getKor fv. kezdodik és "+this.kor+" ertekkel ter vissza.");
+		//System.out.println("PM - getKor fv. kezdodik és "+this.kor+" ertekkel ter vissza.");
 		return this.kor;
 	}
 
@@ -48,9 +46,9 @@ public class Palya_Menedzser {
 	 * @param kor
 	 */
 	public void setKor(int kor) {
-		System.out.println("PM - setKor fv kezdodik "+kor+" parameterrel.");
+		//System.out.println("");
 		this.kor = kor;
-		System.out.println("setKor vege.");
+		//System.out.println("");
 	}
 
 	/**
@@ -58,9 +56,9 @@ public class Palya_Menedzser {
 	 * @param olajkeszlet
 	 */
 	public void setOlajkeszlet(int olajkeszlet) {
-		System.out.println("PM - setOlajkeszlet fv. kezdodik "+olajkeszlet+" paraméterrel.");
+		//System.out.println("");
 		this.olajkeszlet = olajkeszlet;
-		System.out.println("setOlajkeszlet vege.");
+		//System.out.println("");
 	}
 
 	/**
@@ -68,35 +66,8 @@ public class Palya_Menedzser {
 	 * @param ragacskeszlet
 	 */
 	public void setRagacskeszlet(int ragacskeszlet) {
-		System.out.println("PM - setRagacskeszlet fv. kezdodik "+ragacskeszlet+" parameterrel.");
+		//System.out.println("");
 		this.ragacskeszlet = ragacskeszlet;
-		System.out.println("setRagacskeszlet vége.");
-	}
-	
-	private static class OwnTimer extends TimerTask{
-		private double currentT;
-		private final double limit;
-		
-		public OwnTimer(){
-			this.currentT = 0.0;
-			this.limit = 50.0;
-		}
-		
-		public OwnTimer(double The_Limit){
-			this.currentT = 0.0;
-			this.limit = The_Limit;
-		}
-		
-		public void reset(){
-			currentT = 0.0;
-		}
-
-		public double getCurrentT() {
-			return currentT;
-		}
-
-		public void run() {
-						
-		}
+		//System.out.println("");
 	}
 }
