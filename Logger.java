@@ -110,13 +110,16 @@ public class Logger {
 		case 8: //Checkpointra Lépés
 			Palya p = new Palya(2,2,2,2,2,"p");
 			objektumok.add("p : Palya");
-			Mezo m = new Mezo( argumentumok );
+			Mezo m = new Mezo(true,false,false, new Vektor(0,0));
 			objektumok.add("m : Mezo");
-			Robot r = new Robot( argumentumok );
+			Robot r = new Robot(2,2,"r");
 			objektumok.add("r : Robot");
 			System.out.println("Kiindulási objektumok:");
 			objKiir();
 			r.setMezo();
+			m.getCheckpoint()
+			r.addCheckpoint();
+			m.setCheckpoint(false);
 			break;
 		case 9: // Ütközés
 			Palya p = new Palya(2,2,2,2,2,"p");
