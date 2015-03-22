@@ -77,15 +77,15 @@ public class Logger {
 			objektumok.add("p : Palya");
 			Mezo m = new Mezo(false, true, null, r2, new Vektor(0,0));
 			objektumok.add("m : Mezo");
-			Mezo m2 = new Mezo(false, true, null, null, new Vektor(0,0));
+			Mezo m2 = new Mezo(false, true, null, null, new Vektor(0,1));
 			objektumok.add("m2 : Mezo");
 			Robot r = new Robot(2, 2, "r");
 			objektumok.add("r : Robot");
 			Robot r2 = new Robot(2,2,"r2");
 			objektumok.add("r2 : Robot");
 			System.out.println("Kiindulási objektumok:");
-			objKiir();
-			p.robotLeptet(r, new Vektor());
+			objKiir();//"Init" vége
+			p.robotLeptet(r, new Vektor(0,1));//Indul
 			break;
 		default:
 			System.out.println("Nincs ilyen számú szekvenciadiagram");
