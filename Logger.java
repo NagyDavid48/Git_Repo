@@ -79,6 +79,45 @@ public class Logger {
 +			m1.setCheckpoint(true);
 +			m2.setCheckpoint(true);
 			break;
+		case 6: //Olajra Lépés
+			Palya p = new Palya(2,2,2,2,2,"p");
+			objektumok.add("p : Palya");
+			Mezo m = new Mezo(false,true,false, new Vektor(0,0));
+			objektumok.add("m : Mezo");
+			Robot r = new Robot(2,2,"r");
+			objektumok.add("r : Robot");
+			Olajfolt o = new Olajfolt();
+			objektumok.add("o : Olajfolt);
+			System.out.println("Kiindulási objektumok:");
+			objKiir();
+			m.getAkadaly();
+			r.setMezo(m);
+			break;
+		case 7: //Ragacsra Lépés
+			Palya p = new Palya(2,2,2,2,2,"p");
+			objektumok.add("p : Palya");
+			Mezo m = new Mezo(false,true,false, new Vektor(0,0));
+			objektumok.add("m : Mezo");
+			Robot r = new Robot(2,2,"r");
+			objektumok.add("r : Robot");
+			Ragacs ra = new Ragacs();
+			objektumok.add("ra : Ragacs");
+			System.out.println("Kiindulási objektumok:");
+			objKiir();
+			m.getAkadaly();
+			r.setMezo(m);
+			break;
+		case 8: //Checkpointra Lépés
+			Palya p = new Palya(2,2,2,2,2,"p");
+			objektumok.add("p : Palya");
+			Mezo m = new Mezo( argumentumok );
+			objektumok.add("m : Mezo");
+			Robot r = new Robot( argumentumok );
+			objektumok.add("r : Robot");
+			System.out.println("Kiindulási objektumok:");
+			objKiir();
+			r.setMezo();
+			break;
 		case 8:
 			Palya p = new Palya( argumentumok );
 			objektumok.add("p : Palya");
