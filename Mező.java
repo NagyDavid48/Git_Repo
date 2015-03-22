@@ -1,10 +1,10 @@
 package Class_Diagram;
 
-public class Mezı {
+public class Mezo {
 
 	private boolean checkpoint;
 	private boolean palyaszakasz;
-	private Akad·ly akadaly;
+	private Akadaly akadaly;
 	private Robot robot;
 	private Vektor poziciovektor;
 
@@ -15,8 +15,8 @@ public class Mezı {
 	 * @param robot
 	 * @param pozicio
 	 */
-	public Mezı(boolean checkp, boolean akadaly, boolean robot, Vektor pozicio) {
-		// TODO - implement Mezı.Mezı
+	public Mezo(boolean checkp, boolean akadaly, boolean robot, Vektor pozicio) {
+		// TODO - implement Mez√µ.Mez√µ
 		throw new UnsupportedOperationException();
 	}
 
@@ -44,7 +44,7 @@ public class Mezı {
 		this.palyaszakasz = palyaszakasz;
 	}
 
-	public Akad·ly getAkadaly() {
+	public Akadaly getAkadaly() {
 		return this.akadaly;
 	}
 
@@ -52,7 +52,7 @@ public class Mezı {
 	 * 
 	 * @param akadaly
 	 */
-	public void setAkadaly(Akad·ly akadaly) {
+	public void setAkadaly(Akadaly akadaly) {
 		this.akadaly = akadaly;
 	}
 
@@ -80,7 +80,7 @@ public class Mezı {
 		this.poziciovektor = poziciovektor;
 	}
 
-	public Akad·ly getAkadaly() {
+	public Akad√°ly getAkadaly() {
 		return this.akadaly;
 	}
 
@@ -88,7 +88,7 @@ public class Mezı {
 	 * 
 	 * @param akadaly
 	 */
-	public void setAkadaly(Akad·ly akadaly) {
+	public void setAkadaly(Akad√°ly akadaly) {
 		this.akadaly = akadaly;
 	}
 
