@@ -16,6 +16,7 @@ public class Robot {
 	 * @param olajszam
 	 * @param ragacsszam
 	 * Konstruktor létrehoz egy Vektort, egy Mezőt
+	 * Beállítja a tagváltozóit
 	 */
 	public Robot(int olajszam, int ragacsszam, String nev) {
 		Vektor v = new Vektor(0,0);
@@ -25,53 +26,50 @@ public class Robot {
 		this.olaj = olajszam;
 		this.ragacs = ragacsszam;
 		this.obinev = nev;
+		this.kiesett = false;
+		this.olajonvan = false;
 	}
 
 	/**
 	 * 
 	 * @param v
+	 * A kapott Vektort hozzáadja a sajátjához, lekérdezi a mezőjétől, hogy mi a pozícióvektora,
+	 * ezután a vektorAtvalt segítségével kiszámolja, hogy a mezők tömbjében melyik indexű mezőre lépne
 	 */
 	public int[] lep(Vektor v) {
+		sebessegvektor.osszead(v);			//Vektorok összeadása
+		
 		Vektor pozicio = mezo.getPoziciovektor();	//Lekérdezzük az cél mezőnek a pozicióVektorát
 		
-		int[] index = new int[2];			//Létrehozunk belőle és a Vektorból egy érkezési poziciót
-		int[] eredmeny = new int[2];
-		index[0] = pozicio.getX();
-		index[1] = pozicio.getY();
+		int[] index = new int[2];			//Létrehozunk egy tömböt amibe majd a visszatérési érték lesz
 		
-		vektorAtvalt(pozicio);				//A vektorátvált létrehozza a végleges koordinátákat ami
+		index = vektorAtvalt(pozicio);			//A vektorátvált létrehozza a végleges koordinátákat ami
 								//alapján a Pálya tudja azonosítani a cél mezőt
-		for(int i; i<2; i++)
-			index[i] += eredmeny[i];
-		
 		return index;
 	}
 
 	/**
 	 * 
 	 * @param v
+	 * A megváltozott sebességvektor és a mező pozícióvektorából kiszámolja,
+	 * hogy melyik pozícióra lépne a robot, ezt átváltja mezőindexé.
 	 */
 	public int[] vektorAtvalt(Vektor v) {
-		v.setX(1);				//Átváltjuk a Vektort
-		v.setY(1);
-		
-		int[] index = new int[2];		//Belerakjuk egy tömbbe 
-		index[0]=v.getX();
-		index[1]=v.getY();
+		sebessegvektor.osszead(v);		//Létrehozunk egy vektort
 		
 		return index;				//Majd visszaadjuk
 	}
-
+	//Az olaj lerakását Végző metódus
 	public void olajLerak() {
 		Olajfolt o = new Olajfolt();		//A robot létrehoz egy olyajfolt példányt
 		mezo.setAkadaly(o);			//Majd beállítja az akadályt arra a mezőre ahol áll
 	}
-
+	//A ragacs lerakását Végző metódus
 	public void ragacsLerak() {
 		Ragacs r = new Ragacs();		//A robot létrehoz egy Ragacs példányt
 		mezo.setAkadaly(r);			//Majd beállítja az akadályt arra a mezőre ahol áll
 	}
-
+	//A ragacsralépést következményeinek végrehejtását végző metódus
 	public void ragacsraLepett() {
 		sebessegvektor.setX(sebessegvektor.getX()/2);	//A Robot felezi a sebességvektorát
 		sebessegvektor.setY(sebessegvektor.getY()/2);
@@ -81,15 +79,16 @@ public class Robot {
 	/**
 	 * 
 	 * @param olajonvan
+	 * Setter függvény az Olajonvan tagváltozóhoz
 	 */
 	public void setOlajonvan(boolean olajonvan) {
 		this.olajonvan = olajonvan;
 	}
-
+	//Getter függvény az Olajonvan tagváltozóhoz
 	public boolean getOlajonvan() {
 		return this.olajonvan;
 	}
-
+	//Getter függvény az checkpoint tagváltozóhoz
 	public int getCheckpoint() {
 		return this.checkpoint;
 	}
@@ -97,7 +96,7 @@ public class Robot {
 	public void addCheckpoint() {
 		checkpoint++;
 	}
-
+	//Getter függvény az kiesett tagváltozóhoz
 	public boolean getKiesett() {
 		return this.kiesett;
 	}
@@ -105,11 +104,12 @@ public class Robot {
 	/**
 	 * 
 	 * @param kiesett
+	 * Setter függvény a kiesett tagváltozóhoz
 	 */
 	public void setKiesett(boolean kiesett) {
 		this.kiesett = kiesett;
 	}
-
+	//Getter függvény a mezo tagváltozóhoz
 	public Mezo getMezo() {
 		return this.mezo;
 	}
@@ -117,6 +117,7 @@ public class Robot {
 	/**
 	 * 
 	 * @param mezo
+	 * Setter függvény a mezo tagváltozóhoz
 	 */
 	public void setMezo(Mezo mezo) {
 		this.mezo = mezo;
