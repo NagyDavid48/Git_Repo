@@ -60,6 +60,24 @@ public class Logger {
 //			objKiir();
 //			első metódus meghívása
 //			break;
+
+		case 2:
+			Palya_Menedzser pm = new Palya_Menedzser( argumentumok );
++			objektumok.add("pm : Palya_Menedzser");
++			Palya p = new Palya( argumentumok );
++			objektumok.add("p : Palya");
+			Robot r = new Robot( argumentumok );
+			objektumok.add("r : Robot");
++			Mezo m1 = new Mezo( argumentumok );
++			objektumok.add("m1 : Mezo");
++			Mezo m2 = new Mezo( argumentumok );
++			objektumok.add("m2 : Mezo");
+			System.out.println("Kiindulási objektumok:");
++			objKiir();
+			p.vektorFeldolgoz();
+			pm.korSzamol();
+			break;
+			
 		case 5:
 +			Palya_Menedzser pm = new Palya_Menedzser( argumentumok );
 +			objektumok.add("pm : Palya_Menedzser");
