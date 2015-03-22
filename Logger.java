@@ -60,24 +60,6 @@ public class Logger {
 //			objKiir();
 //			első metódus meghívása
 //			break;
-
-		case 2: //Robot léptetése
-			Palya_Menedzser pm = new Palya_Menedzser( 5, 2, 2, 2, 2, 2, "pm" );
-+			objektumok.add("pm : Palya_Menedzser");
-+			Palya p = new Palya( ,"p");
-+			objektumok.add("p : Palya");
-			Robot r = new Robot( ,"r");
-			objektumok.add("r : Robot");
-+			Mezo m1 = new Mezo(false, true, NULL, r, new Vektor(0, 0), "m1");
-+			objektumok.add("m1 : Mezo");
-+			Mezo m2 = new Mezo(false, true, NULL, NULL, new Vektor(0, 0),"m2");
-+			objektumok.add("m2 : Mezo");
-			System.out.println("Kiindulási objektumok:");
-+			objKiir();
-			p.vektorFeldolgoz();
-			pm.korSzamol();
-			break;
-			
 		case 5:
 +			Palya_Menedzser pm = new Palya_Menedzser( argumentumok );
 +			objektumok.add("pm : Palya_Menedzser");
@@ -123,7 +105,20 @@ public class Logger {
 			objKiir();//"Init" vége
 			p.robotLeptet(r, new Vektor(0,1));//Indul
 			break;
-		default:
+		case 10: //Leesés
+			Palya p = new Palya(2,2,2,2,2,"p");
+			objektumok.add("p : Palya");
+			Robot r1 = new Robot(2,2,"r1");
+			objektumok.add("r1 : Robot");
+			Mezo m1 = new Mezo(false, true, null, r1, new Vektor(0,0));
+			objektumok.add("m1 : Mezo");
+			Mezo m2 = new Mezo(false, false, null, null, new Vektor(0,1));
+			objektumok.add("m2 : Mezo");
+			System.out.println("Kiindulási objektumok:");
+			objKiir();//"Init" vége
+			p.robotLeptet(r1, new Vektor(0,1));//Indul
+			break;
+		default://Magical place in Hell!
 			System.out.println("Nincs ilyen számú szekvenciadiagram");
 		}
 		
