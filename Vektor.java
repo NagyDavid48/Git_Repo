@@ -1,24 +1,31 @@
 package Class_Diagram;
 
+//Vektor Segédosztály a metemetikában megismert Vektor modellezésére szolgál
+
 public class Vektor {
-	private int x;
-	private int y;
+	private int x;	//A Vektor x koordinátája
+	private int y;	//A Vektor y koordinátája
 	
-	public Vektor(int x, int y)
+	//Konstruktor
+	public Vektor(int x, int y)	
 	{
 		this.x = x;
 		this.y = y;
 	}
 	
-	public int getX() {
+	//Getter függvény az x koordinátára
+	public int getX() {		
 		return x;
 	}
+	//Setter függvény az x koordinátára
 	public void setX(int x) {
 		this.x = x;
 	}
+	//Getter függvény az y koordinátára
 	public int getY() {
 		return y;
 	}
+	//Setter függvény az y koordinátára
 	public void setY(int y) {
 		this.y = y;
 	}
