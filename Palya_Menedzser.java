@@ -1,4 +1,4 @@
-package palya;
+package Class_Diagram;
 
 /**
  * Ez az osztály a pálya és a felhasználó "között" van. Fogadja az inputokat és a játék számára
