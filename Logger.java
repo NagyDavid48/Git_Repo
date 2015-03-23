@@ -60,6 +60,13 @@ public class Logger {
 //			objKiir();
 //			első metódus meghívása
 //			break;
+		case 1:
+			Palya_Menedzser pm = new Palya_Menedzser(1,2,2,1,2,2,"pm");
+			objektumok.add("pm : Palya_Menedzser");
+			System.out.println("Kiindulási objektumok:");
+			objKiir();
+			Palya p = new Palya(2,2,2,2,2,"p");
+			break;
 		case 2: //Robot Léptet
 			Palya_Menedzser pm = new Palya_Menedzser(1,2,2,1,2,2,"pm");
 			objektumok.add("pm : Palya_Menedzser");
