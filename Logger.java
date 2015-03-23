@@ -113,7 +113,7 @@ public class Logger {
 			Robot r = new Robot(2,2,"r");
 			objektumok.add("r : Robot");
 			Olajfolt o = new Olajfolt();
-			objektumok.add("o : Olajfolt);
+			objektumok.add("o : Olajfolt");
 			System.out.println("Kiindulási objektumok:");
 			objKiir();
 			m.getAkadaly();
