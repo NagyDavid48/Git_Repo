@@ -157,7 +157,7 @@ public class Logger {
 			m2.getPalyaszakasz();
 			r1.setKiesett(true);
 			break;
-		case 11:
+		case 11://Nyerés
 			Palya_Menedzser PM = new Palya_Menedzser(2, 2, 2, 2, 2, 2, "PM");
 			objektumok.add("PM : Palya_Menedzser");
 			Palya p = new Palya();
@@ -168,6 +168,8 @@ public class Logger {
 			objektumok.add("r2 : Robot");
 			System.out.println("Kiindulási objektumok:");
 			objKiir();//"Init" vége
+			PM.korszamol();
+			p.gyoztesValaszt();
 			break;
 		default://Magical place in Hell!
 			System.out.println("Nincs ilyen számú szekvenciadiagram");
