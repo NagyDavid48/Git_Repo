@@ -60,7 +60,7 @@ public class Logger {
 //			objKiir();
 //			első metódus meghívása
 //			break;
-		case 3:
+		case 3: //Olajfolt Elhelyezése
 			Palya_Menedzser pm = new Palya_Menedzser(1,2,2,1,2,2,"pm");
 			objektumok.add("pm : Palya_Menedzser");
 			Palya p = new Palya(2,2,2,2,2,"p");
@@ -73,7 +73,7 @@ public class Logger {
 			objKiir();
 			p.olajLerak(r);
 			break;
-		case 4:
+		case 4: //Ragacs Elhelyezése
 			Palya_Menedzser pm = new Palya_Menedzser(1,2,2,1,2,2,"pm");
 			objektumok.add("pm : Palya_Menedzser");
 			Palya p = new Palya(2,2,2,2,2,"p");
@@ -86,7 +86,7 @@ public class Logger {
 			objKiir();
 			p.ragacsLerak(r);
 			break;
-		case 5:
+		case 5: //CheckPoint Beállítása
 +			Palya_Menedzser pm = new Palya_Menedzser(1,2,2,1,2,2,"pm");
 +			objektumok.add("pm : Palya_Menedzser");
 +			Palya p = new Palya(2,2,2,2,2,"p");
