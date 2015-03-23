@@ -188,7 +188,7 @@ public class Logger {
 			r2.getVektor();
 			p.utkozes(r2, new Vektor(0,-2));
 			m2.getRobot();
-			r2.setMezo(r2);
+			r2.setMezo(m2);
 			r.setMezo(m);
 			break;
 		case 10: //Leesés
