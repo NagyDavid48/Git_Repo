@@ -142,5 +142,11 @@ public class Palya {
 		robotok[1].getCheckpoint();
 		logMetodusReturn("");
 	}
+	
+	public void addRobot(Robot r){
+		if(robotok[0] == null)
+			robotok[0] = r;
+		else robotok[1] = r;
+	}
 
 }
