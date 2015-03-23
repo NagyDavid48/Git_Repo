@@ -33,10 +33,10 @@ public class Palya {
 		this.objNev = objNev;
 	}
 
-	/**
+	/**Vektor feldolgozása
 	 * 
-	 * 
-	 * 
+	 * Megnézi hogy a robot az előző körben olajra lépett-e, majd annak függvényében
+	 * lépteti a robotot. 
 	 * @param v
 	 */
 	public void vektorFeldolgoz(Vektor v) {
@@ -124,9 +124,9 @@ public class Palya {
 		
 	}
 	
-	/**
+	/**Checkpointok összesítése
 	 *
-	 * A játék végén kiválasztja hogy melyik robot lépett ráa legtöbb checkpointra
+	 * A játék végén kiválasztja hogy melyik robot lépett rá legtöbb checkpointra
 	 * 
 	 */
 	public void gyoztesValaszt() {
