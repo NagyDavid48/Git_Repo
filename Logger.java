@@ -87,7 +87,7 @@ public class Logger {
 			Robot r = new Robot(2,2,"r");
 			objektumok.add("r : Robot");
 			Olajfolt o = new Olajfolt();
-			objektumok.add("o : Olajfolt);
+			objektumok.add("o : Olajfolt");
 			System.out.println("Kiindulási objektumok:");
 			objKiir();
 			m.getAkadaly();
@@ -156,6 +156,18 @@ public class Logger {
 			p.robotLeptet(r1, new Vektor(0,1));//Indul
 			m2.getPalyaszakasz();
 			r1.setKiesett(true);
+			break;
+		case 11:
+			Palya_Menedzser PM = new Palya_Menedzser(2, 2, 2, 2, 2, 2, "PM");
+			objektumok.add("PM : Palya_Menedzser");
+			Palya p = new Palya();
+			objektumok.add("p : Palya");
+			Robot r1 = new Robot();
+			objektumok.add("r1 : Robot");
+			Robot r2 = new Robot();
+			objektumok.add("r2 : Robot");
+			System.out.println("Kiindulási objektumok:");
+			objKiir();//"Init" vége
 			break;
 		default://Magical place in Hell!
 			System.out.println("Nincs ilyen számú szekvenciadiagram");
