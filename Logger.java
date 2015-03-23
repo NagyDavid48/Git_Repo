@@ -173,9 +173,9 @@ public class Logger {
 		case 9: // Ütközés
 			Palya p = new Palya(2,2,2,2,2,"p");
 			objektumok.add("p : Palya");
-			Mezo m = new Mezo(false, true, null, r2, new Vektor(0,0));
+			Mezo m = new Mezo(false, true, null, r2, new Vektor(0,0),"m");
 			objektumok.add("m : Mezo");
-			Mezo m2 = new Mezo(false, true, null, null, new Vektor(0,1));
+			Mezo m2 = new Mezo(false, true, null, null, new Vektor(0,1), "m2");
 			objektumok.add("m2 : Mezo");
 			Robot r = new Robot(2, 2, "r");
 			objektumok.add("r : Robot");
@@ -196,9 +196,9 @@ public class Logger {
 			objektumok.add("p : Palya");
 			Robot r1 = new Robot(2,2,"r1");
 			objektumok.add("r1 : Robot");
-			Mezo m1 = new Mezo(false, true, null, r1, new Vektor(0,0));
+			Mezo m1 = new Mezo(false, true, null, r1, new Vektor(0,0), "m1");
 			objektumok.add("m1 : Mezo");
-			Mezo m2 = new Mezo(false, false, null, null, new Vektor(0,1));
+			Mezo m2 = new Mezo(false, false, null, null, new Vektor(0,1), "m2");
 			objektumok.add("m2 : Mezo");
 			System.out.println("Kiindulási objektumok:");
 			objKiir();//"Init" vége
