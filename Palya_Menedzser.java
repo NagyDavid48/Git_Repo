@@ -55,6 +55,7 @@ public class Palya_Menedzser {
 		// ... Kőr számlálás
 		// ... Valami feltétel
 		Logger.logMetodusStart(obinev, "korSzamol()");
+		Logger.logMetodusReturn("");
 	}
 
 	public int getKor() {
@@ -70,6 +71,7 @@ public class Palya_Menedzser {
 	public void setKor(int kor) {
 		Logger.logMetodusStart(obinev, "setKor(kor)");
 		this.kor = kor;
+		Logger.logMetodusReturn("");
 	}
 
 	/**
@@ -79,6 +81,7 @@ public class Palya_Menedzser {
 	public void setOlajkeszlet(int olajkeszlet) {
 		Logger.logMetodusStart(obinev, "setOlajkeszlet(olajkeszlet)");
 		this.olajkeszlet = olajkeszlet;
+		Logger.logMetodusReturn("");
 	}
 
 	/**
@@ -88,5 +91,6 @@ public class Palya_Menedzser {
 	public void setRagacskeszlet(int ragacskeszlet) {
 		Logger.logMetodusStart(obinev, "setRagacskeszlet(ragacskeszlet)");
 		this.ragacskeszlet = ragacskeszlet;
+		Logger.logMetodusReturn("");
 	}
 }
