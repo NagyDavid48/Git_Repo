@@ -40,7 +40,7 @@ public class Palya {
 	 * @param v
 	 */
 	public void vektorFeldolgoz(Vektor v) {
-		System.out.println("vektorFeldolgoz");
+		logMetodusStart(objNev, "vektorFeldolgoz(Vektor v)");
 		
 		
 		robotok[0].getOlajonVan();
@@ -49,6 +49,7 @@ public class Palya {
 		mezok[0][1].getCheckpoint();
 		robotok[0].addCheckpoint();
 		
+		logMetodusReturn("");
 	}
 
 	/**Robot léptetése
@@ -59,7 +60,7 @@ public class Palya {
 	 * @param v
 	 */
 	public void robotLeptet(Robot r, Vektor v) {
-		System.out.println("robotLeptet");
+		logMetodusStart(objNev, "robotLeptet(Robot r, Vektor v)");
 		
 		
 		r.lep(v);
@@ -72,6 +73,7 @@ public class Palya {
 		
 		r.setMezo(mezok[0][1]);
 		
+		logMetodusReturn("");
 	}
 	/** Checkpoint elhelyezés
 	 *
@@ -79,11 +81,13 @@ public class Palya {
 	 * 
 	 */
 	public void cpKioszt() {
-		System.out.println("cpKioszt");
+		logMetodusStart(objNev, "cpKioszt()");
 		
 		mezok[0][0].setCheckpoint(true);
 		mezok[0][1].setCheckpoint(true);
 		mezok[1][0].setCheckpoint(true);
+	
+		logMetodusReturn("");
 	}
 
 	/**Olajfolt elhelyezése
@@ -93,8 +97,9 @@ public class Palya {
 	 * @param r
 	 */
 	public void olajLerak(Robot r) {
-		System.out.println("olajLerak");
+		logMetodusStart(objNev, "olajLerak(Robot r)");
 		r.olajLerak();
+		logMetodusReturn("");
 	}
 
 	/**Ragacs elhelyezése
@@ -104,8 +109,9 @@ public class Palya {
 	 * @param r
 	 */
 	public void ragacsLerak(Robot r) {
-		System.out.println("ragacsLerak");
+		logMetodusStart(objNev, "ragacsLerak(Robot r)");
 		r.ragacsLerak();
+		logMetodusReturn("");
 	}
 
 	/**Két robot ütközése
@@ -116,12 +122,12 @@ public class Palya {
 	 * @param v
 	 */
 	public void utkozes(Robot r, Vektor v) {
-		System.out.println("utkozes");
+		logMetodusStart(objNev, "utkozes(Robot r, Vektor v)");
 		
 		r.lep(v);
 		mezok[0][1].getRobot();
 		r.setMezo(mezok[0][1]);
-		
+		logMetodusReturn("");
 	}
 	
 	/**Checkpointok összesítése
@@ -130,10 +136,11 @@ public class Palya {
 	 * 
 	 */
 	public void gyoztesValaszt() {
-		System.out.println("gyoztesValaszt");
+		logMetodusStart(objNev, "gyoztesValaszt()");
 		
 		robotok[0].getCheckpoint();
 		robotok[1].getCheckpoint();
+		logMetodusReturn("");
 	}
 
 }
