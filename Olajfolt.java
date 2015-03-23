@@ -4,16 +4,18 @@ public class Olajfolt extends Akadaly {
 
 	//Konstruktor a szkeleton idejére.
 	public Olajfolt(String nev){
+		Logger.logMetodusStart(nev, "(new Olajfolt)");
 		this.obinev = nev;
+		Logger.tabok-=1;
 	}
 	/**
-	 * A robot megcsúszik. A következő kőrben nem változtathatja a sebességét.
+	 * A robot megcsúszik. A következő körben nem változtathatja a sebességét.
 	 * @param r
 	 */
 	public void viselkedes(Robot r) {
-		Logger.logMetodusStart(obinev, "viselkedes(Robot r)");
+		Logger.logMetodusStart(obinev, "viselkedes("+r.obinev+")");
 		//System.out.println("");
-		r.setOlajonVan(true);
+		r.setOlajonvan(true);
 		//System.out.println("");
 		Logger.logMetodusReturn("");
 	}
