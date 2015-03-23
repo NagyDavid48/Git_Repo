@@ -11,8 +11,10 @@ public class Olajfolt extends Akadaly {
 	 * @param r
 	 */
 	public void viselkedes(Robot r) {
+		Logger.logMetodusStart(obinev, "viselkedes(Robot r)");
 		//System.out.println("");
 		r.setOlajonVan(true);
 		//System.out.println("");
+		Logger.logMetodusReturn("");
 	}
 }
