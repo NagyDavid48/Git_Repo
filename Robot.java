@@ -22,7 +22,7 @@ public class Robot {
 		Logger.logMetodusStart(nev, "(new Robot)");
 		Vektor v = new Vektor(0,0);
 		this.sebessegvektor = v;
-		this.mezo = mezo;
+	//	this.mezo = mezo;
 		this.olaj = olajszam;
 		this.ragacs = ragacsszam;
 		this.obinev = nev;
@@ -93,7 +93,7 @@ public class Robot {
 	 * Setter függvény az Olajonvan tagváltozóhoz
 	 */
 	public void setOlajonvan(boolean olajonvan) {
-		Logger.logMetodusStart(obinev, Boolean.toString(olajonvan));
+		Logger.logMetodusStart(obinev, "setOlajonvan("+Boolean.toString(olajonvan)+")");
 		this.olajonvan = olajonvan;
 		Logger.logMetodusReturn("");
 	}
@@ -126,7 +126,7 @@ public class Robot {
 	 * Setter függvény a kiesett tagváltozóhoz
 	 */
 	public void setKiesett(boolean kiesett) {
-		Logger.logMetodusStart(obinev, Boolean.toString(kiesett));
+		Logger.logMetodusStart(obinev, "setKiesett("+Boolean.toString(kiesett)+")");
 		this.kiesett = kiesett;
 		Logger.logMetodusReturn("");
 	}
@@ -147,6 +147,14 @@ public class Robot {
 	public void setMezo(Mezo mezo) {
 		Logger.logMetodusStart(obinev, "setMezo("+mezo.obinev+")");
 		this.mezo = mezo;
+//		mezo.setRobot(this);
 		Logger.logMetodusReturn("");
+	}
+
+	public Vektor getVektor() {
+		Logger.logMetodusStart(obinev, "getVektor()");
+		Logger.logMetodusReturn("w");
+		return this.sebessegvektor;
+		
 	}
 }
