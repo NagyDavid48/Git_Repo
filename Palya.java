@@ -2,14 +2,11 @@ package Class_Diagram;
 
 public class Palya {
 
-	private Mezo[][] mezok;
-	private Robot[] robotok;
+	public Mezo[][] mezok = new Mezo[2][2];
+	private Robot[] robotok = new Robot[2];
 	private int soronlevo;
 	
-	private Mezo m;
-	private Robot r;
-	private Ragacs rag;
-	public String objNev;
+	private String objNev;
 
 	/**
 	 * 
@@ -19,37 +16,51 @@ public class Palya {
 	 * @param olaj
 	 * @param ragacs
 	 */
-	public Palya(int szelesseg, int magassag, int robotszam, int olaj, int ragacs, String objNev) {
-		//Mező létrehozása
-		m = new Mezo(false, true, null, null, new Vektor(0, 0), "m");
-		
+	public Palya(int szelesseg, int magassag, int robotszam, int olaj, int ragacs, String objNev, int init) {
+		Logger.logMetodusStart(objNev, "(new Palya)");
+		this.objNev = objNev;
+		//Mezők létrehozása
+		mezok[0][0] = new Mezo(false, true, null, null, null, "m");
 		cpKioszt();
+	
+		//Robotok létrehozása
+		robotok[0] = new Robot(0,0,"r");
+		robotok[0].setMezo(mezok[0][0]);
 		
-		//Robot létrehozása
-		r = new Robot(2, 2, "r");
-		
-		r.setMezo(m);
-		
+		Olajfolt o = new Olajfolt("o");
+		mezok[0][0].setAkadaly(o);
+		Logger.tabok-=1;
+	}
+	
+	public Palya(int szelesseg, int magassag, int robotszam, int olaj, int ragacs, String objNev) {
+		//Mezők létrehozása
+		mezok = new Mezo[magassag][szelesseg];
+		for(int i = 0; i < magassag; ++i){
+			for(int j = 0; j < szelesseg; j++){
+				mezok[i][j] = new Mezo(false, false, null, null, null, objNev);
+			}
+		}
+
 		this.objNev = objNev;
 	}
 
-	/**Vektor feldolgozása
+	/**
 	 * 
-	 * Megnézi hogy a robot az előző körben olajra lépett-e, majd annak függvényében
-	 * lépteti a robotot. 
+	 * 
+	 * 
 	 * @param v
 	 */
 	public void vektorFeldolgoz(Vektor v) {
-		logMetodusStart(objNev, "vektorFeldolgoz(Vektor v)");
+		Logger.logMetodusStart(objNev,"vektorFeldolgoz(v)");
 		
 		
-		robotok[0].getOlajonVan();
+		robotok[0].getOlajonvan();
 		robotLeptet(robotok[0], v);
-		mezok[0][1].setrobot(robotok[0]);
-		mezok[0][1].getCheckpoint();
-		robotok[0].addCheckpoint();
+		mezok[0][1].setRobot(robotok[0]);
+		if (mezok[0][1].getCheckpoint())
+			robotok[0].addCheckpoint();
+		Logger.logMetodusReturn("");
 		
-		logMetodusReturn("");
 	}
 
 	/**Robot léptetése
@@ -60,20 +71,25 @@ public class Palya {
 	 * @param v
 	 */
 	public void robotLeptet(Robot r, Vektor v) {
-		logMetodusStart(objNev, "robotLeptet(Robot r, Vektor v)");
-		
+		Logger.logMetodusStart(objNev, "robotLeptet("+r.obinev+", v)");
+		Robot masikrobot;
 		
 		r.lep(v);
-		
 		mezok[0][0].setRobot(null);
 		
-		mezok[0][1].getPalyaszakasz();
-		mezok[0][1].getAkadaly();
-		mezok[0][1].getRobot();
-		
+		if(!mezok[0][1].getPalyaszakasz())
+			r.setKiesett(true);
+		else {
+			mezok[0][1].getAkadaly();
+			if((masikrobot=mezok[0][1].getRobot())!=null){
+				masikrobot.getVektor();
+				utkozes(masikrobot, new Vektor(0,0));
+			}
+			
+		}
 		r.setMezo(mezok[0][1]);
+		Logger.logMetodusReturn("");
 		
-		logMetodusReturn("");
 	}
 	/** Checkpoint elhelyezés
 	 *
@@ -81,13 +97,14 @@ public class Palya {
 	 * 
 	 */
 	public void cpKioszt() {
-		logMetodusStart(objNev, "cpKioszt()");
+		Logger.logMetodusStart(objNev, "cpKioszt()");
 		
 		mezok[0][0].setCheckpoint(true);
-		mezok[0][1].setCheckpoint(true);
-		mezok[1][0].setCheckpoint(true);
-	
-		logMetodusReturn("");
+		if (mezok[0][1]!=null){
+			mezok[0][1].setCheckpoint(true);
+			mezok[1][0].setCheckpoint(true);
+		}
+		Logger.logMetodusReturn("");
 	}
 
 	/**Olajfolt elhelyezése
@@ -97,9 +114,9 @@ public class Palya {
 	 * @param r
 	 */
 	public void olajLerak(Robot r) {
-		logMetodusStart(objNev, "olajLerak(Robot r)");
+		Logger.logMetodusStart(objNev, "olajLerak("+r.obinev+")");
 		r.olajLerak();
-		logMetodusReturn("");
+		Logger.logMetodusReturn("");
 	}
 
 	/**Ragacs elhelyezése
@@ -109,9 +126,9 @@ public class Palya {
 	 * @param r
 	 */
 	public void ragacsLerak(Robot r) {
-		logMetodusStart(objNev, "ragacsLerak(Robot r)");
+		Logger.logMetodusStart(objNev, "ragacsLerak("+r.obinev+")");
 		r.ragacsLerak();
-		logMetodusReturn("");
+		Logger.logMetodusReturn("");
 	}
 
 	/**Két robot ütközése
@@ -122,25 +139,36 @@ public class Palya {
 	 * @param v
 	 */
 	public void utkozes(Robot r, Vektor v) {
-		logMetodusStart(objNev, "utkozes(Robot r, Vektor v)");
-		
+		Logger.logMetodusStart(objNev, "utkozes("+r.obinev+", -2w)");
+		Robot masikrobot;
 		r.lep(v);
-		mezok[0][1].getRobot();
-		r.setMezo(mezok[0][1]);
-		logMetodusReturn("");
+
+		if(!mezok[1][0].getPalyaszakasz())
+			r.setKiesett(true);
+		else {
+			mezok[1][0].getAkadaly();
+			if((masikrobot=mezok[1][0].getRobot())!=null){
+				masikrobot.getVektor();
+				utkozes(masikrobot, new Vektor(0,0));
+			}
+			
+		}
+		r.setMezo(mezok[1][0]);
+		
+		Logger.logMetodusReturn("");
 	}
 	
-	/**Checkpointok összesítése
+	/**
 	 *
-	 * A játék végén kiválasztja hogy melyik robot lépett rá legtöbb checkpointra
+	 * A játék végén kiválasztja hogy melyik robot lépett ráa legtöbb checkpointra
 	 * 
 	 */
 	public void gyoztesValaszt() {
-		logMetodusStart(objNev, "gyoztesValaszt()");
+		Logger.logMetodusStart(objNev, "gyoztesValaszt()");
 		
 		robotok[0].getCheckpoint();
 		robotok[1].getCheckpoint();
-		logMetodusReturn("");
+		Logger.logMetodusReturn("");
 	}
 	
 	public void addRobot(Robot r){
