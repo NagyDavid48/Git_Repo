@@ -160,11 +160,11 @@ public class Logger {
 		case 11://Nyerés
 			Palya_Menedzser PM = new Palya_Menedzser(2, 2, 2, 2, 2, 2, "PM");
 			objektumok.add("PM : Palya_Menedzser");
-			Palya p = new Palya();
+			Palya p = new Palya(2, 2, 2, 2, 2, "p");
 			objektumok.add("p : Palya");
-			Robot r1 = new Robot();
+			Robot r1 = new Robot(2, 2, "r1");
 			objektumok.add("r1 : Robot");
-			Robot r2 = new Robot();
+			Robot r2 = new Robot(2,2,"r2");
 			objektumok.add("r2 : Robot");
 			System.out.println("Kiindulási objektumok:");
 			objKiir();//"Init" vége
