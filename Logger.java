@@ -60,6 +60,24 @@ public class Logger {
 //			objKiir();
 //			első metódus meghívása
 //			break;
+		case 2: //Robot Léptet
+			Palya_Menedzser pm = new Palya_Menedzser(1,2,2,1,2,2,"pm");
+			objektumok.add("pm : Palya_Menedzser");
+			Palya p = new Palya(2,2,2,2,2,"p");
+			objektumok.add("p : Palya");
+			Mezo m1 = new Mezo(false,false,false, new Vektor(0,0));
+			objektumok.add("m1 : Mezo");
+			Mezo m2 = new Mezo(false,false,false, new Vektor(1,0));
+			objektumok.add("m2 : Mezo");
+			Robot r = new Robot(2,2,"r");
+			objektumok.add("r : Robot");
+			Vektor v = new Vektor(0,0,"v");
+			objektumok.add("v : Vektor");
+			System.out.println("Kiindulási objektumok:");
+			objKiir();
+			p.vektorFeldolgoz(v);
+			pm.korSzamol();
+			break;
 		case 3: //Olajfolt Elhelyezése
 			Palya_Menedzser pm = new Palya_Menedzser(1,2,2,1,2,2,"pm");
 			objektumok.add("pm : Palya_Menedzser");
