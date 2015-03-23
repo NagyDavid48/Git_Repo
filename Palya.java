@@ -26,7 +26,7 @@ public class Palya {
 		}
 		//Robotok létrehozása
 		robotok = new Robot[2]();
-		for(int i = 0; i < robotok.length(); i++){
+		for(int i = 0; i < robotok.length; i++){
 			robotok[i] = new Robot(olaj, ragacs, "r"+i);
 		}
 		this.objNev = objNev;
@@ -63,7 +63,7 @@ public class Palya {
 		
 		r.lep(v);
 		
-		mezok[0][0].setRobot(NULL);
+		mezok[0][0].setRobot(null);
 		
 		mezok[0][1].getPalyaszakasz();
 		mezok[0][1].getAkadaly();
