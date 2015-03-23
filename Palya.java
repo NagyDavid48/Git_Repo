@@ -6,7 +6,7 @@ public class Palya {
 	private Robot[] robotok;
 	private int soronlevo;
 	
-	private String objNev;
+	public String objNev;
 
 	/**
 	 * 
