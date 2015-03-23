@@ -71,11 +71,9 @@ public class Logger {
 			objektumok.add("m2 : Mezo");
 			Robot r = new Robot(2,2,"r");
 			objektumok.add("r : Robot");
-			Vektor v = new Vektor(0,0,"v");
-			objektumok.add("v : Vektor");
 			System.out.println("Kiindulási objektumok:");
 			objKiir();
-			p.vektorFeldolgoz(v);
+			p.vektorFeldolgoz(new Vektor(0,0,"v"));
 			pm.korSzamol();
 			break;
 		case 3: //Olajfolt Elhelyezése
