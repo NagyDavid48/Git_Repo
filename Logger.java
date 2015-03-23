@@ -72,9 +72,9 @@ public class Logger {
 			objektumok.add("pm : Palya_Menedzser");
 			Palya p = new Palya(2,2,2,2,2,"p");
 			objektumok.add("p : Palya");
-			Mezo m1 = new Mezo(false,false,false, new Vektor(0,0));
+			Mezo m1 = new Mezo(false,true,null,null,new Vektor(0,0),"m1");
 			objektumok.add("m1 : Mezo");
-			Mezo m2 = new Mezo(false,false,false, new Vektor(1,0));
+			Mezo m2 = new Mezo(false,true,null,null,new Vektor(1,0),"m2");
 			objektumok.add("m2 : Mezo");
 			Robot r = new Robot(2,2,"r");
 			objektumok.add("r : Robot");
@@ -88,7 +88,7 @@ public class Logger {
 			objektumok.add("pm : Palya_Menedzser");
 			Palya p = new Palya(2,2,2,2,2,"p");
 			objektumok.add("p : Palya");
-			Mezo m = new Mezo(false,true,false, new Vektor(0,0));
+			Mezo m = new Mezo(false,true,null,null,new Vektor(0,0),"m");
 			objektumok.add("m : Mezo");
 			Robot r = new Robot(2,2,"r");
 			objektumok.add("r : Robot");
@@ -101,7 +101,7 @@ public class Logger {
 			objektumok.add("pm : Palya_Menedzser");
 			Palya p = new Palya(2,2,2,2,2,"p");
 			objektumok.add("p : Palya");
-			Mezo m = new Mezo(false,true,false, new Vektor(0,0));
+			Mezo m = new Mezo(false,true,null,null,new Vektor(0,0),"m");
 			objektumok.add("m : Mezo");
 			Robot r = new Robot(2,2,"r");
 			objektumok.add("r : Robot");
@@ -114,11 +114,11 @@ public class Logger {
 +			objektumok.add("pm : Palya_Menedzser");
 +			Palya p = new Palya(2,2,2,2,2,"p");
 +			objektumok.add("p : Palya");
-+			Mezo m = new Mezo(false,false,false, new Vektor(0,0));
++			Mezo m = new Mezo(false,true,null,null,new Vektor(0,0),"m");
 +			objektumok.add("m : Mezo");
-+			Mezo m1 = new Mezo(false,false,false, new Vektor(1,0));
++			Mezo m1 = new Mezo(false,true,null,null,new Vektor(1,0),"m1");
 +			objektumok.add("m1 : Mezo");
-+			Mezo m2 = new Mezo(false,false,false, new Vektor(0,1));
++			Mezo m2 = new Mezo(false,true,null,null,new Vektor(0,1),"m2");
 +			objektumok.add("m2 : Mezo");
 +			System.out.println("Kiindulási objektumok:");
 +			objKiir();
@@ -131,12 +131,12 @@ public class Logger {
 		case 6: //Olajra Lépés
 			Palya p = new Palya(2,2,2,2,2,"p");
 			objektumok.add("p : Palya");
-			Mezo m = new Mezo(false,true,false, new Vektor(0,0));
-			objektumok.add("m : Mezo");
 			Robot r = new Robot(2,2,"r");
 			objektumok.add("r : Robot");
 			Olajfolt o = new Olajfolt();
 			objektumok.add("o : Olajfolt");
+			Mezo m = new Mezo(false,true,o,null,new Vektor(0,0),"m");
+			objektumok.add("m : Mezo");
 			System.out.println("Kiindulási objektumok:");
 			objKiir();
 			m.getAkadaly();
@@ -145,12 +145,12 @@ public class Logger {
 		case 7: //Ragacsra Lépés
 			Palya p = new Palya(2,2,2,2,2,"p");
 			objektumok.add("p : Palya");
-			Mezo m = new Mezo(false,true,false, new Vektor(0,0));
-			objektumok.add("m : Mezo");
 			Robot r = new Robot(2,2,"r");
 			objektumok.add("r : Robot");
 			Ragacs ra = new Ragacs();
 			objektumok.add("ra : Ragacs");
+			Mezo m = new Mezo(false,true,ra,null,new Vektor(0,0),"m");
+			objektumok.add("m : Mezo");
 			System.out.println("Kiindulási objektumok:");
 			objKiir();
 			m.getAkadaly();
@@ -159,7 +159,7 @@ public class Logger {
 		case 8: //Checkpointra Lépés
 			Palya p = new Palya(2,2,2,2,2,"p");
 			objektumok.add("p : Palya");
-			Mezo m = new Mezo(true,false,false, new Vektor(0,0));
+			Mezo m = new Mezo(true,true,null,null,new Vektor(0,0),"m");
 			objektumok.add("m : Mezo");
 			Robot r = new Robot(2,2,"r");
 			objektumok.add("r : Robot");
