@@ -60,16 +60,42 @@ public class Logger {
 //			objKiir();
 //			első metódus meghívása
 //			break;
+		case 3:
+			Palya_Menedzser pm = new Palya_Menedzser(1,2,2,1,2,2,"pm");
+			objektumok.add("pm : Palya_Menedzser");
+			Palya p = new Palya(2,2,2,2,2,"p");
+			objektumok.add("p : Palya");
+			Mezo m = new Mezo(false,true,false, new Vektor(0,0));
+			objektumok.add("m : Mezo");
+			Robot r = new Robot(2,2,"r");
+			objektumok.add("r : Robot");
+			System.out.println("Kiindulási objektumok:");
+			objKiir();
+			p.olajLerak(r);
+			break;
+		case 4:
+			Palya_Menedzser pm = new Palya_Menedzser(1,2,2,1,2,2,"pm");
+			objektumok.add("pm : Palya_Menedzser");
+			Palya p = new Palya(2,2,2,2,2,"p");
+			objektumok.add("p : Palya");
+			Mezo m = new Mezo(false,true,false, new Vektor(0,0));
+			objektumok.add("m : Mezo");
+			Robot r = new Robot(2,2,"r");
+			objektumok.add("r : Robot");
+			System.out.println("Kiindulási objektumok:");
+			objKiir();
+			p.ragacsLerak(r);
+			break;
 		case 5:
-+			Palya_Menedzser pm = new Palya_Menedzser( argumentumok );
++			Palya_Menedzser pm = new Palya_Menedzser(1,2,2,1,2,2,"pm");
 +			objektumok.add("pm : Palya_Menedzser");
-+			Palya p = new Palya( argumentumok );
++			Palya p = new Palya(2,2,2,2,2,"p");
 +			objektumok.add("p : Palya");
-+			Mezo m = new Mezo( argumentumok );
++			Mezo m = new Mezo(false,false,false, new Vektor(0,0));
 +			objektumok.add("m : Mezo");
-+			Mezo m1 = new Mezo( argumentumok );
++			Mezo m1 = new Mezo(false,false,false, new Vektor(1,0));
 +			objektumok.add("m1 : Mezo");
-+			Mezo m2 = new Mezo( argumentumok );
++			Mezo m2 = new Mezo(false,false,false, new Vektor(0,1));
 +			objektumok.add("m2 : Mezo");
 +			System.out.println("Kiindulási objektumok:");
 +			objKiir();
@@ -87,7 +113,7 @@ public class Logger {
 			Robot r = new Robot(2,2,"r");
 			objektumok.add("r : Robot");
 			Olajfolt o = new Olajfolt();
-			objektumok.add("o : Olajfolt");
+			objektumok.add("o : Olajfolt);
 			System.out.println("Kiindulási objektumok:");
 			objKiir();
 			m.getAkadaly();
