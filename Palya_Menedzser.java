@@ -28,7 +28,7 @@ public class Palya_Menedzser {
 	 * @param olaj - Robotok olaj száma
 	 * @param nev - Objektum név
 	 */
-	public Palya_Menedzser(int kor, int mag, int szel, int rob, int ragacs, int olaj, string nev) {
+	public Palya_Menedzser(int kor, int mag, int szel, int rob, int ragacs, int olaj, String nev) {
 		this.kor = kor;
 		this.ragacskeszlet = ragacs;
 		this.olajkeszlet = olaj;
@@ -36,13 +36,19 @@ public class Palya_Menedzser {
 		palya = new Palya(mag, szel, rob, olaj, ragacs);
 	}
 	
-	public Palya_Menedzser(int kor, int ragacs, int olaj, string nev) {
+	public Palya_Menedzser(int kor, int ragacs, int olaj, String nev) {
 		this.kor = kor;
 		this.ragacskeszlet = ragacs;
 		this.olajkeszlet = olaj;
 		this.obinev = nev;
 	}
-
+	
+	public Palya_Menedzser(int kor, int ragacs, int olaj) {
+		this.kor = kor;
+		this.ragacskeszlet = ragacs;
+		this.olajkeszlet = olaj;
+	}
+	
 	public void korSzamol() {
 		// ... Kőr számlálás
 		// ... Valami feltétel
