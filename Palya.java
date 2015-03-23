@@ -6,6 +6,9 @@ public class Palya {
 	private Robot[] robotok;
 	private int soronlevo;
 	
+	private Mezo m;
+	private Robot r;
+	private Ragacs rag;
 	public String objNev;
 
 	/**
@@ -17,18 +20,16 @@ public class Palya {
 	 * @param ragacs
 	 */
 	public Palya(int szelesseg, int magassag, int robotszam, int olaj, int ragacs, String objNev) {
-		//Mezők létrehozása
-		mezok = new Mezo[magassag][szelesseg];
-		for(int i = 0; i < magassag; ++i){
-			for(int j = 0; j < szelesseg; j++){
-				mezok[i][j] = new Mezo();
-			}
-		}
-		//Robotok létrehozása
-		robotok = new Robot[2]();
-		for(int i = 0; i < robotok.length; i++){
-			robotok[i] = new Robot(olaj, ragacs, "r"+i);
-		}
+		//Mező létrehozása
+		m = new Mezo(false, true, null, null, new Vektor(0, 0), "m");
+		
+		cpKioszt();
+		
+		//Robot létrehozása
+		r = new Robot(2, 2, "r");
+		
+		r.setMezo(m);
+		
 		this.objNev = objNev;
 	}
 
