@@ -205,6 +205,8 @@ public class Logger {
 			p.robotLeptet(r1, new Vektor(0,1));//Indul
 			m2.getPalyaszakasz();
 			r1.setKiesett(true);
+			r1.setMezo(m2);
+			m2.setRobot(r1);
 			break;
 		case 11://Nyerés
 			Palya_Menedzser PM = new Palya_Menedzser(2, 2, 2, 2, 2, 2, "PM");
