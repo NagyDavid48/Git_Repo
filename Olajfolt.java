@@ -2,6 +2,10 @@ package Class_Diagram;
 
 public class Olajfolt extends Akadaly {
 
+	public Olajfolt(){
+		this.elet = 4;
+	}
+	
 	//Konstruktor a szkeleton idejére.
 	public Olajfolt(String nev){
 		Logger.logMetodusStart(nev, "(new Olajfolt)");
