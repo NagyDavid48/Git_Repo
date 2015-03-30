@@ -19,5 +19,7 @@ public abstract class Akadaly {
 	 * Az élet változót csökkenti.
 	 * Olajfoltnál körönként hívódik meg, míg ragacsnál a viselkedés fv. hívásakor.
 	 */
-	public abstract void eletCsokkent();
+	public void eletCsokkent(){
+		elet--;
+	}
 }
